@@ -36,7 +36,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.animestream.better_player
+        package: com.jhomlala.better_player
         pluginClass: BetterPlayerPlugin
       ios:
         pluginClass: BetterPlayerPlugin
