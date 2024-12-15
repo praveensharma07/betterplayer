@@ -393,7 +393,7 @@ internal class BetterPlayer(
         }
         val mediaItemBuilder = MediaItem.Builder()
         mediaItemBuilder.setUri(uri)
-        if (cacheKey != null && cacheKey.isNotEmpty()) {
+        if (!cacheKey.isNullOrEmpty()) {
             mediaItemBuilder.setCustomCacheKey(cacheKey)
         }
         val mediaItem = mediaItemBuilder.build()
