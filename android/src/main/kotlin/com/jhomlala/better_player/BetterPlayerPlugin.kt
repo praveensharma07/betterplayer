@@ -204,7 +204,7 @@ class BetterPlayerPlugin : FlutterPlugin, ActivityAware, MethodCallHandler {
                 val name = call.argument<String?>(NAME_PARAMETER)
                 val index = call.argument<Int?>(INDEX_PARAMETER)
                 if (name != null && index != null) {
-                    player.setAudioTrack(name, index)
+                    player.setAudioTrack(name, index, context = flutterState?.applicationContext!!)
                 }
                 result.success(null)
             }
