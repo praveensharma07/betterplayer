@@ -461,7 +461,7 @@ internal class BetterPlayer(
                 }
             })
         surface = Surface(textureEntry.surfaceTexture())
-        exoPlayer?.addAnalyticsListener(EventLogger());
+//        exoPlayer?.addAnalyticsListener(EventLogger());
         exoPlayer?.setVideoSurface(surface)
         setAudioAttributes(exoPlayer, true)
         exoPlayer?.addListener(object : Player.Listener {

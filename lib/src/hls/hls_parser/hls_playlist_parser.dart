@@ -766,6 +766,7 @@ class HlsPlaylistParser {
 
         if (fullSegmentEncryptionKeyUri != null &&
             fullSegmentEncryptionIV == null) {
+          fullSegmentEncryptionIV = "0";
           throw ParserException(
               'The encryption IV attribute must be present when an initialization segment is encrypted with METHOD=AES-128.');
         }
