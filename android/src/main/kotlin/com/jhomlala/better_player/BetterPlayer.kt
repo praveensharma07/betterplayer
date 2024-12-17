@@ -50,6 +50,7 @@ import com.google.android.exoplayer2.ui.PlayerNotificationManager.MediaDescripti
 import com.google.android.exoplayer2.upstream.DataSource
 import com.google.android.exoplayer2.upstream.DefaultDataSource
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSource
+import com.google.android.exoplayer2.util.EventLogger
 import com.google.android.exoplayer2.util.Util
 import com.jhomlala.better_player.DataSourceUtils.getDataSourceFactory
 import com.jhomlala.better_player.DataSourceUtils.getUserAgent
@@ -62,6 +63,7 @@ import java.io.File
 import java.util.*
 import kotlin.math.max
 import kotlin.math.min
+
 
 internal class BetterPlayer(
     context: Context,
@@ -459,6 +461,7 @@ internal class BetterPlayer(
                 }
             })
         surface = Surface(textureEntry.surfaceTexture())
+        exoPlayer?.addAnalyticsListener(EventLogger());
         exoPlayer?.setVideoSurface(surface)
         setAudioAttributes(exoPlayer, true)
         exoPlayer?.addListener(object : Player.Listener {
